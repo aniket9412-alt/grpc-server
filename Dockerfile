@@ -24,7 +24,7 @@ FROM golang:latest
 
 WORKDIR /app/
 COPY * /app/
-RUN CGO_ENABLED=0 go build -o /app/grpc-server .
+RUN CGO_ENABLED=0 go build -o /app/main .
 
 FROM scratch
 COPY --from=builder /app/grpc-server /grpc-server
