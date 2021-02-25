@@ -17,12 +17,7 @@ COPY . .
 RUN go build -o main .
 
 # Expose port 8080 to the outside world
-#EXPOSE 9000
+EXPOSE 50051
 
 # Command to run the executable
-#CMD ["./main"]
-
-FROM scratch
-COPY --from=builder /app/grpc-server /grpc-server
-EXPOSE 50051
-CMD ["/grpc-server"]
+CMD ["./main"]
