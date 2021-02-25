@@ -13,8 +13,8 @@ import (
 func main() {
 
 	fmt.Println("Go gRPC Beginners Tutorial!")
-	fmt.Println(fmt.Sprintf("abc:%d", 9000))
-	lis, err := net.Listen("tcp", fmt.Sprintf("abc:%d", 9000))
+	fmt.Println(fmt.Sprintf("%d", 9000))
+	lis, err := net.Listen("tcp", fmt.Sprintf("%d", 9000))
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
