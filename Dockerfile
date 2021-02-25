@@ -23,6 +23,7 @@ FROM golang:latest
 #CMD ["./main"]
 
 WORKDIR /app
+COPY go.mod ./
 COPY * /app/
 RUN go build -o /app/main .
 
