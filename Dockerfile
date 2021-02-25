@@ -22,9 +22,9 @@ FROM golang:latest
 # Command to run the executable
 #CMD ["./main"]
 
-WORKDIR /app/
+WORKDIR /app
 COPY * /app/
-RUN CGO_ENABLED=0 go build -o /app/main .
+RUN go build -o /app/main .
 
 FROM scratch
 COPY --from=builder /app/grpc-server /grpc-server
