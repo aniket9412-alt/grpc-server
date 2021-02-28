@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-server-gke
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: grpc-server-gke
+  template:
+    metadata:
+      labels:
+        app: grpc-server-gke
+    spec:
+      containers:
+      - name: grpc-server-gke
+        image: gcr.io/grpc-server-305809/grpc_server-latest
+        ports:
+        - containerPort: 50051
