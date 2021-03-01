@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: server-pod
+  labels:
+    name: server-pod
+    app: grpc-server-app
+spec: 
+  containers:
+  - name: server-app
+    image: gcr.io/grpc-server-305809/grpc_server
+    ports:
+    - containerPort: 50051
