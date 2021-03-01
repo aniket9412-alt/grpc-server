@@ -8,6 +8,6 @@ metadata:
 spec: 
   containers:
   - name: server-app
-    image: gcr.io/grpc-server-305809/grpc_server
+    image: gcr.io/grpc-server-305809/grpc-server-image
     ports:
     - containerPort: 50051
